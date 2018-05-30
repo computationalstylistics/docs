@@ -1,10 +1,10 @@
 ---
 title: "Authorship verification with the package `stylo`"
 author: Maciej Eder
-date: 27/05/2018
+date: 30/05/2018
 output: 
-  github_document:
-  #  highlight: pygments
+  html_document:
+    highlight: pygments
     fig_width: 7
     fig_height: 5
 bibliography: bibliography.bib
@@ -17,10 +17,10 @@ csl: digital_humanities_abstracts.csl
 # set global chunk options
 
 library(stylo)
-library(knitr)
+#library(knitr)
 
 # using a cache folder
-opts_chunk$set(cache = TRUE)
+# opts_chunk$set(cache = TRUE)
 ```
 
 
@@ -198,7 +198,7 @@ imposters(reference.set = data[-c(4), 1:100], test = data[4, 1:100])
 
 So far so good. One issue has not been resolved, though. In the example discussed above, the novel entitled “The Cuckoo's Calling” was assigned the score 0.29 when tested against Harlan Coben. Is it much? Well, it depends. Some authors might exhibit stronger signal, some other might be stylometrically blurry. It depends on many factors which cannot be simply accounted for once and forever. Instead, however, one might thoroughly examine a given corpus, in order to estimate an average proximity between any two texts written by the same author, and an average proximity between a text by a given author and any text written by someone else. Having done that, one can define a margin where a classifier is (on average) wrong. This is a grey area where we should abstain from making any “yes” or “no” conclusions.
 
-The prodedure proposed for the General Imposters method involves a score shifting algorithm [@kestemont_authorship_2016], which is based on the _c@1_ measure of classifier’s performance [@penas_simple_2011]. In the recent implementation, a dedicated function `imposters.optimize()` takes care of finding optimal parameters. The only dataset it needs is a table with frequencies: please make sure that the authorial classes are represented by >1 texts (single texts are automatically excluded from the analysis). Type the following code:
+The prodedure proposed for the General Imposters method involves a score shifting algorithm [@kestemont_authorship_2016], which is based on the `c@1` measure of classifier’s performance [@penas_simple_2011]. In the recent implementation, a dedicated function `imposters.optimize()` takes care of finding optimal parameters. The only dataset it needs is a table with frequencies: please make sure that the authorial classes are represented by >1 texts (single texts are automatically excluded from the analysis). Type the following code:
 
 ``` {r eval = FALSE}
 # activating another dataset, which contains Southern American novels:
