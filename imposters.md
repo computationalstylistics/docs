@@ -73,7 +73,7 @@ After a few seconds, the final results will be shown on the
 
     ## Testing a given candidate against imposters...
 
-    ## coben     0.36
+    ## coben     0.31
 
     ## lewis     0
 
@@ -82,7 +82,7 @@ After a few seconds, the final results will be shown on the
     ## tolkien   0
 
     ##   coben   lewis rowling tolkien 
-    ##    0.36    0.00    1.00    0.00
+    ##    0.31    0.00    1.00    0.00
 
 NA
 
