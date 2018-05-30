@@ -3,8 +3,8 @@ title: "Authorship verification with the package `stylo`"
 author: Maciej Eder
 date: 30/05/2018
 output: 
-  html_document:
-    highlight: pygments
+  github_document:
+  #  highlight: pygments
     fig_width: 7
     fig_height: 5
 bibliography: bibliography.bib
@@ -27,7 +27,7 @@ library(stylo)
 
 ## Introduction
 
-This post introduces to a new feature of the package `stylo` (ver. 0.6.7), namely the General Imposters (GI) method, also referred to as the second verification system (o2), introduced by Koppel and Winter [-@koppel_determining_2014] and applied to the study of Julius Caesar’s disputed writings [@kestemont_authenticating_2016]. To quote the authors, “[t]he general intuition behind the GI, is not to assess whether two documents are simply similar in writing style, given a static feature vocabulary, but rather, it aims to assess whether two documents are significantly more similar to one another than other documents, across a variety of stochastically impaired feature spaces [@eder_computational_2012; @stamatatos_authorship_2006], and com- pared to random selections of so-called distractor authors [@juola_rowling_2015], also called ‘imposters’.” [@kestemont_authenticating_2016, 88].
+This post introduces to a new feature of the package `stylo` (ver. 0.6.7), namely the General Imposters (GI) method, also referred to as the second verification system (o2), introduced by Koppel and Winter [-@koppel_determining_2014] and applied to the study of Julius Caesar’s disputed writings [@kestemont_authenticating_2016]. To quote the authors, “[t]he general intuition behind the GI, is not to assess whether two documents are simply similar in writing style, given a static feature vocabulary, but rather, it aims to assess whether two documents are significantly more similar to one another than other documents, across a variety of stochastically impaired feature spaces [@eder_computational_2012; @stamatatos_authorship_2006], and comared to random selections of so-called distractor authors [@juola_rowling_2015], also called ‘imposters’.” [@kestemont_authenticating_2016, 88].
 
 The implementation provided by the package `stylo` is a rather faithful interpretation of two algorithms described in a study on authorship verification [@kestemont_authorship_2016]. A tiny function for computing the score `c@1` used to evaluate the system is directly transplanted from the original implementation ([https://github.com/mikekestemont/ruzicka](https://github.com/mikekestemont/ruzicka)).
 
