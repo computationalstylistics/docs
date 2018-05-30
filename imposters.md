@@ -107,7 +107,7 @@ After a few seconds, the final results will be shown on the
 
     ## Testing a given candidate against imposters...
 
-    ## coben     0.36
+    ## coben     0.34
 
     ## lewis     0
 
@@ -116,18 +116,20 @@ After a few seconds, the final results will be shown on the
     ## tolkien   0
 
     ##   coben   lewis rowling tolkien 
-    ##    0.36    0.00    1.00    0.00
+    ##    0.34    0.00    1.00    0.00
 
 The interpretation of the results is rather straightforward: “The
 Cuckoo’s Calling” was not written by CS Lewis, nor was it penned by
 JRR Tolkien. Similarly, the score for JK Rowling turned out to be very
 high (could not be higher), which clearly suggests the author of the
 analyzed novel. The only class that is difficult to interpret is Harlan
-Coben, since he was assigned 0.31. The score obviously falls into the
-\<0.5 category, but still: can we reliably say that this candidate
-should be rulled out? Or, rather, should we abstain from any conclusions
-here? The problem of defining the “I don’t know” area around the score
-0.5 will be discussed below.
+Coben, since he was assigned 0.34. (When you run the same test again,
+the final score will probably slightly differ, due to the stochastic
+nature of the test). The score obviously falls into the \<0.5 category,
+but still: can we reliably say that this candidate should be rulled out?
+Or, rather, should we abstain from any conclusions here? The problem of
+defining the “I don’t know” area around the score 0.5 will be discussed
+below.
 
 ## Details
 
@@ -267,7 +269,7 @@ imposters(reference.set = data[-c(4), 1:100], test = data[4, 1:100])
 
 So far so good. One issue has not been resolved, though. In the example
 discussed above, the novel entitled “The Cuckoo’s Calling” was assigned
-the score 0.31 when tested against Harlan Coben. Is it much? Well, it
+the score 0.34 when tested against Harlan Coben. Is it much? Well, it
 depends. Some authors might exhibit stronger signal, some other might be
 stylometrically blurry. It depends on many factors which cannot be
 simply accounted for once and forever. Instead, however, one might
@@ -306,12 +308,13 @@ results:
 
     ## [1] 0.43 0.55
 
-These two single scores give us some knowledge of how to interpret the
-results obtained by the `imposters()` function. Any values smaller than
-0.43 and greater than 0.55 can be, with a high degree of confidence,
-translated into binary answers of “no” and “yes”, respectively.
+These two single scores (note that your scores might differ a bit) give
+us some knowledge of how to interpret the results obtained by the
+`imposters()` function. Any values smaller than 0.43 and greater than
+0.55 can be, with a high degree of confidence, translated into binary
+answers of “no” and “yes”, respectively.
 
-And what about the aforementioned Coben, with the value 0.31? Is it high
+And what about the aforementioned Coben, with the value 0.34? Is it high
 enough to claim that he penned “The Cuckoo’s Calling”? To answer this
 question, you have to compute the *p1* and *p2* values for the dataset
 `galbraith`\!
