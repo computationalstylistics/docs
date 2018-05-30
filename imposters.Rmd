@@ -3,8 +3,8 @@ title: "Authorship verification with the package `stylo`"
 author: Maciej Eder
 date: 27/05/2018
 output: 
-  html_document:
-    highlight: pygments
+  github_document:
+  #  highlight: pygments
     fig_width: 7
     fig_height: 5
 bibliography: bibliography.bib
