@@ -82,7 +82,7 @@ stylo(distance.measure = "dist.entropy")
 ```
 
 
-Now, what about an inverse correlation distance? The following code was contributed by Richard Forsyth (pers. comm.):
+Now, what about an inverse correlation distance? It has been successfully applied in a cross-language benchmark study distances in stylometry [@forsyth_document_2014], in which, by the way, a few other interesting measures have been tested. The following code was contributed by Richard Forsyth:
 
 
 ``` {r eval = FALSE}

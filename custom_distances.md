@@ -84,8 +84,11 @@ The next step is rather obvious, given the already-discussed examples:
 stylo(distance.measure = "dist.entropy")
 ```
 
-Now, what about an inverse correlation distance? The following code was
-contributed by Richard Forsyth (pers. comm.):
+Now, what about an inverse correlation distance? It has been
+successfully applied in a cross-language benchmark study distances in
+stylometry (Forsyth and Sharoff, 2014), in which, by the way, a few
+other interesting measures have been tested. The following code was
+contributed by Richard Forsyth:
 
 ``` r
 ##  Additional distance function for Stylo() :
@@ -118,6 +121,16 @@ introduced so far in exact sciences (Moisl, 2014). Try them all\!
 ## References
 
 <div id="refs" class="references">
+
+<div id="ref-forsyth_document_2014">
+
+**Forsyth, R. and Sharoff, S.** (2014). Document dissimilarity within
+and across languages: A benchmarking study. *Literary and Linguistic
+Computing*, **29**(1): 6–22
+doi:[10.1093/llc/fqt002](https://doi.org/10.1093/llc/fqt002) (accessed
+31 May 2018).
+
+</div>
 
 <div id="ref-jannidis_improving_2015">
 
