@@ -220,7 +220,7 @@ print(c(0.43, 0.55))
 
 These two single scores (note that your scores might differ a bit) give us some knowledge of how to interpret the results obtained by the `imposters()` function. Any values smaller than 0.43 and greater than 0.55 can be, with a high degree of confidence, translated into binary answers of “no” and “yes”, respectively.
 
-And what about the aforementioned Coben, with the value 0.34? Is it high enough to claim that he penned “The Cuckoo's Calling”? To answer this question, you have to compute the _p1_ and _p2_ values for the dataset `galbraith`!
+And what about the aforementioned Coben, with the value 0.34? Is it high enough to claim that he penned “The Cuckoo's Calling”? To answer this question, you have to compute the _p1_ and _p2_ values for the dataset `galbraith` yourself!
 
 
 
@@ -290,7 +290,7 @@ Other parameters of the function `imposters()` include:
 
 Some other, more techical, parameters can be found in the manual page of the function. Type `help(imposters)` for the details.
 
-Certainly, the same applied to the `imposters.optimize()` function. The same parameters that were introduced immediately above, can be passed to the fine-tuning function, e.g.:
+Certainly, the same applies to the `imposters.optimize()` function. The same parameters that were introduced immediately above, can be passed to the fine-tuning function, e.g.:
 
 ``` {r eval = FALSE}
 results = imposters(my_reference_set, distance = "wurzburg")
